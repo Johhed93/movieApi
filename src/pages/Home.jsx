@@ -1,7 +1,11 @@
+import ShowMovie from "../components/ShowMovie";
+import "./Home.css"
+const Home = ({movies}) => {
+  const newArray= movies.find((_,index)=>index===0)
+  console.log(newArray)
+  return <div className="home-container">
 
-const Home = ({movie}) => {
-  console.log(movie);
-
-  return <div className="home-container"></div>;
+   {<ShowMovie movie={newArray}/>}
+  </div>;
 };
 export default Home;

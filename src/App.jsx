@@ -7,13 +7,14 @@ const App = () => {
   const [movies, setNewMovies] = useState([]);
   useEffect(() => {
     fetchData({ setMovies: setNewMovies })
+    console.log(movies)
   }, []);
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home movie={movies}/>} />
+          <Route path="/" element={<Home movies={movies}/>} />
         </Routes>
       </BrowserRouter>
     </>

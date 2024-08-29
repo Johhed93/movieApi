@@ -7,6 +7,7 @@ if(!res.ok){
 }
 const data= await res.json();
 setMovies(data)
+console.log(data)
 }catch(error){
 console.error("Något blev fel i fetch")
 }
