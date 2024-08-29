@@ -1,18 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 .container{
-   
     position: relative;
     width: fit-content;
     display: flex;
     gap: 10px;
-    font-family: "SUSE", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "SUSE", sans-serif;  
   padding: 15px;
   background: rgba(141, 141, 141, 0.2);
 border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 4px 30px rgba(195, 195, 195, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
@@ -23,8 +19,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     position: absolute;
     left: 50%;
     transform: translate(-50%, 50%);
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background: blueviolet;
     z-index: -1;
 }
@@ -32,7 +28,42 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 190px;
+    justify-content: space-between;
 }
 img{
     border-radius: 10px;
+    width: 180px;
+    object-fit: cover;
+}
+button{
+    outline: none;
+    cursor: pointer;
+    width: 90px;
+    padding: 10px 0;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-family: "SUSE", sans-serif; 
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+.btn1{
+    background: rgb(173, 37, 173);
+}
+.btn1:hover{
+    border-color: white;
+}
+.btn2 {
+    background: transparent;
+    border-color: rgb(173, 37, 173);
+    font-weight: bold;
+}
+.btn2:hover{
+    background: rgb(173, 37, 173);
+}
+.button-container{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
 }
