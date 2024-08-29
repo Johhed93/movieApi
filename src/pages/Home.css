@@ -1,5 +1,8 @@
 .home-container{
     margin-top: 150px;
-    width: 80%;
+    width: 85%;
     margin-inline: auto;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
