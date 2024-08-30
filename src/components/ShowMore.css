@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 .container{
     position: relative;
-    width: fit-content;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     font-family: "SUSE", sans-serif;  
   padding: 15px;
   background: rgba(141, 141, 141, 0.2);
@@ -13,52 +12,57 @@ backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.bg-blur1{
+.bg-image1{
     filter: blur(60px);
     -webkit-filter: blur(60px);
     position: absolute;
     left: 50%;
     transform: translate(-50%, 50%);
-    width: 80px;
-    height: 80px;
-    background: blueviolet;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #b77fe9, #b47de4);
     z-index: -1;
 }
-.bg-blur2{
+.bg-image2{
     filter: blur(60px);
     -webkit-filter: blur(60px);
     position: absolute;
     left: 70%;
     bottom: 30%;
     transform: translate(-50%, 50%);
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     background: linear-gradient(to right, #54a526, #158f11);
     z-index: -2;
 }
-.bg-blur3{
+.bg-image3{
     filter: blur(60px);
     -webkit-filter: blur(60px);
     position: absolute;
     left: 60%;
     transform: translate(-50%, 50%);
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     background: #52e6eb;
     z-index: -3;
 }
-.card{
+.info{
     color: white;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 190px;
     justify-content: space-between;
+    max-width: 400px;
 }
-.thumb-nail{
+.image{
     border-radius: 10px;
-    width: 180px;
+    max-width: 300px;
     object-fit: cover;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 button{
     outline: none;
@@ -98,4 +102,5 @@ button{
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    align-items: center;
 }

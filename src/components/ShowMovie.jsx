@@ -15,7 +15,9 @@ const location= useParams();
   const isInFavourites= favourites.some(favourite=>favourite.name===movie.name)
   return (
     <div className="container">
-      <div className="bg-image"></div>
+      <div className="bg-blur1"></div>
+      <div className="bg-blur2"></div>
+      <div className="bg-blur3"></div>
       <img src={movie.thumb_url} className="thumb-nail"/>
       <div className="card">
         <h2>{movie.name}</h2>
