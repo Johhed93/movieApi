@@ -8,6 +8,7 @@ const navigate= useNavigate();
 const returnToHomePage = ()=>{
     navigate("/")
 }
+
 return(
     <main className="center-content">
     {favourites.length>0 ? 
