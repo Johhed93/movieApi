@@ -40,8 +40,7 @@ img{
 button{
     outline: none;
     cursor: pointer;
-    width: 90px;
-    padding: 10px 0;
+    padding: 10px 20px;
     border: 2px solid transparent;
     border-radius: 20px;
     font-family: "SUSE", sans-serif; 
@@ -49,7 +48,7 @@ button{
     color: white;
 }
 .btn1{
-    background: rgb(173, 37, 173);
+    background: rgb(204, 79, 204);
 }
 .btn1:hover{
     border-color: white;

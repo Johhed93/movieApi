@@ -1,6 +1,16 @@
 import Button from "./buttons/Button";
+import { useState } from "react";
 import "./ShowMovie.css";
-const ShowMovie = ({ movie }) => {
+const ShowMovie = ({ movie, favourites,setNewFavourites }) => {
+  const addToFavourites = () => {
+    setNewFavourites((prevState) => [...prevState, movie]);
+    console.log(favourites)
+  };
+  const removeFromFavourites = ()=>{
+    const updatedList= favourites.filter(favourite=> favourite.name !== movie.name)
+    setNewFavourites(updatedList)
+  }
+  const isInFavourites= favourites.some(favourite=>favourite.name===movie.name)
 
   return (
     <div className="container">
@@ -12,7 +22,11 @@ const ShowMovie = ({ movie }) => {
         <p>Rating: {movie.rating}⭐</p>
         <div className="button-container">
           <Button text={"Les mer"} classname={"btn2"} />
-          <Button text={"Legg till"} classname={"btn1"} />
+          {!isInFavourites ? (<Button text={"Legg till"} classname={"btn1"} func={addToFavourites} />)
+          : 
+          (<Button text={"Ta bort"} classname={"btn1"} func={removeFromFavourites} />)
+          }
+          
         </div>
       </div>
     </div>
