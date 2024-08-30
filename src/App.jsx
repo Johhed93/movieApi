@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import fetchData from "./api/FetchData";
 import Favourites from "./pages/Favourites";
@@ -15,8 +15,9 @@ const App = () => {
 
   return (
     <>
-    <Navbar/>
+    
       <BrowserRouter>
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home movies={movies}/>} />
           <Route path="/Favourites" element={<Favourites/>}></Route>
