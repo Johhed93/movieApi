@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+.center-content{
+    margin-top: 200px;
+    width: 85%;
+    margin-inline: auto;
+    font-family: "SUSE", sans-serif;
+    color: white;
+}
+.flex{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.item-holder{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
