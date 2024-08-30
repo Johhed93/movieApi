@@ -17,6 +17,7 @@ const Navbar = () => {
   ];
   return (
     <header>
+      <div className="blur"></div>
       <nav>
         <div className="logo-container">
           <img
