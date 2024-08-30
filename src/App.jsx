@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/" element={<Home movies={movies} setNewFavourites={setNewFavourites} favourites={favourites}/>} />
           <Route path="/Favourites" element={<Favourites favourites={favourites} setNewFavourites={setNewFavourites}/>}></Route>
           <Route path="/MyPage" element={<MyPage/>}></Route>
-          <Route path="/Movies/:name" element={<ReadMore/>}/>
+          <Route path="/Movies/:name" element={<ReadMore movies={movies}/>}/>
         </Routes>
       </BrowserRouter>
     </>
