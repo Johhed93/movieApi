@@ -1,17 +1,17 @@
 import Button from "./buttons/Button";
 import { useState } from "react";
 import "./ShowMovie.css";
+import { Link } from "react-router-dom";
 const ShowMovie = ({ movie, favourites,setNewFavourites }) => {
   const addToFavourites = () => {
     setNewFavourites((prevState) => [...prevState, movie]);
-    console.log(favourites)
   };
   const removeFromFavourites = ()=>{
     const updatedList= favourites.filter(favourite=> favourite.name !== movie.name)
     setNewFavourites(updatedList)
   }
-  const isInFavourites= favourites.some(favourite=>favourite.name===movie.name)
 
+  const isInFavourites= favourites.some(favourite=>favourite.name===movie.name)
   return (
     <div className="container">
       <div className="bg-image"></div>
@@ -21,7 +21,7 @@ const ShowMovie = ({ movie, favourites,setNewFavourites }) => {
         <p>Year: {movie.year}</p>
         <p>Rating: {movie.rating}⭐</p>
         <div className="button-container">
-          <Button text={"Les mer"} classname={"btn2"} />
+          <Link className={"btn2"} to={`/Movies/${movie.name}`}>Les mer</Link>
           {!isInFavourites ? (<Button text={"Legg till"} classname={"btn1"} func={addToFavourites} />)
           : 
           (<Button text={"Ta bort"} classname={"btn1"} func={removeFromFavourites} />)
