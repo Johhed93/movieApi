@@ -8,9 +8,9 @@ import MyPage from "./pages/MyPage";
 import Navbar from "./components/Navbar";
 const App = () => {
   const [movies, setNewMovies] = useState([]);
+  const[favourites, setNewFavourites]= useState([])
   useEffect(() => {
     fetchData({ setMovies: setNewMovies })
-    console.log(movies)
   }, []);
 
   return (
@@ -19,8 +19,8 @@ const App = () => {
       <BrowserRouter>
       <Navbar/>
         <Routes>
-          <Route path="/" element={<Home movies={movies}/>} />
-          <Route path="/Favourites" element={<Favourites/>}></Route>
+          <Route path="/" element={<Home movies={movies} setNewFavourites={setNewFavourites} favourites={favourites}/>} />
+          <Route path="/Favourites" element={<Favourites favourites={favourites} setNewFavourites={setNewFavourites}/>}></Route>
           <Route path="/MyPage" element={<MyPage/>}></Route>
         </Routes>
       </BrowserRouter>
