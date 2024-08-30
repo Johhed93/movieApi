@@ -25,6 +25,7 @@ return(
     (
         <div className="flex no-info">
             <h1>Du har inga favoriter än.</h1>
+            <div className="bg-blur"></div>
             <Button classname={"btn1"} text={"Hitta nya filmer"} func={returnToHomePage}/>
             </div>
         )

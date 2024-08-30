@@ -15,10 +15,22 @@
 }
 .no-info{
     gap: 30px;
+    position: relative;
 }
 .item-holder{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     flex-direction: row;
+}
+.bg-blur{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translate(-50%, 50%);
+        background-color: rgb(194, 72, 231);
+        filter: blur(60px);
+        z-index: -1;
 }
