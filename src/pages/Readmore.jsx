@@ -6,12 +6,11 @@ const ReadMore = ({movies, favourites, setNewFavourites})=>{
     const selectedMovie= movies.filter((movie)=>movie.name===place.name)
     return (
         <main className="center-content flex">
-            <h1>Les mer om</h1>
-            <div>
+            <>
             {selectedMovie.map((movie, index)=>(
             <ShowMore key={index} movie={movie} setNewFavourites={setNewFavourites} favourites={favourites} movies={movies}/>
             ))}
-            </div>
+            </>
         </main>
     )
 }
