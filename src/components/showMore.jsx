@@ -1,6 +1,7 @@
 import "./ShowMore.css";
 import Button from "./buttons/Button";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
   const [similarMovies, setSimilarMovies] = useState([]);
   const addToFavourites = () => {
@@ -11,9 +12,9 @@ const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
     setNewFavourites(updatedList);
   };
   const isInFavourites = favourites.some((favourite) => favourite.name === movie.name);
-  useEffect(()=>{
-  findSimilarMovies()
-  }, [])
+  useEffect(() => {
+    findSimilarMovies();
+  }, [movie]);
   const findSimilarMovies = () => {
     const pointsToSimilarites = movies.map((allmovies) => {
       const genreScore = allmovies.genre.reduce(
@@ -31,12 +32,13 @@ const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
       const totalScore = genreScore + actorScore + directorScore;
       return { ...allmovies, similarityScore: totalScore };
     });
-    const sortByMatch = pointsToSimilarites.sort((a,b)=>{
-      return b.similarityScore-a.similarityScore
-    })
-    setSimilarMovies(sortByMatch)
+    const sortByMatch = pointsToSimilarites.sort((a, b) => {
+      return b.similarityScore - a.similarityScore;
+    });
+    const filterWithoutMovieOnPage = sortByMatch.filter((mov) => mov.name !== movie.name);
+    const displayMovies= filterWithoutMovieOnPage.slice(0,5)
+    setSimilarMovies(displayMovies);
   };
-  
   return (
     <div className="content-container">
       <div className="info-container">
@@ -71,7 +73,18 @@ const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
           </div>
         </div>
       </div>
-      <h3>Liknande titlar</h3>
+      <div className="similar">
+        <h3>Liknande titlar</h3>
+        <div className="similar-movies">
+          {similarMovies.map((m, index) => {
+            return (
+              <Link key={index} to={`/Movies/${m.name}`}>
+                <img src={m.thumb_url} alt="" className="thumb"/>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
