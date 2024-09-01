@@ -9,7 +9,7 @@ const ReadMore = ({movies, favourites, setNewFavourites})=>{
             <h1>Les mer om</h1>
             <div>
             {selectedMovie.map((movie, index)=>(
-            <ShowMore key={index} movie={movie} setNewFavourites={setNewFavourites} favourites={favourites}/>
+            <ShowMore key={index} movie={movie} setNewFavourites={setNewFavourites} favourites={favourites} movies={movies}/>
             ))}
             </div>
         </main>
