@@ -78,8 +78,9 @@ const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
         <div className="similar-movies">
           {similarMovies.map((m, index) => {
             return (
-              <Link key={index} to={`/Movies/${m.name}`}>
-                <img src={m.thumb_url} alt="" className="thumb"/>
+              <Link key={index} to={`/Movies/${m.name}`} className="movie-link">
+                <img src={m.thumb_url} alt="" className="thumb"></img>
+                {index===0 ? (<span className="best-match">Best match</span>): (<></>)}
               </Link>
             );
           })}

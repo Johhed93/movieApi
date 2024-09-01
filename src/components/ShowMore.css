@@ -125,4 +125,23 @@ align-items: center;
 .thumb{
     width: 120px;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.best-match{
+    position: absolute;
+    background-color: #b47de4;
+    color: white;
+    top: -10px;
+    left: -10px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+.movie-link{
+    position: relative;
+    
+}
+.thumb:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(168, 168, 168, 0.25) 0px 50px 100px -20px, rgba(223, 223, 223, 0.3) 0px 30px 60px -30px;
 }
