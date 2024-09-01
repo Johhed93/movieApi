@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
-.container{
+.content-container{
+    padding: 15px;
+    background: rgba(141, 141, 141, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(195, 195, 195, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.info-container{
     position: relative;
     display: flex;
     gap: 20px;
     font-family: "SUSE", sans-serif;  
-  padding: 15px;
-  background: rgba(141, 141, 141, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(195, 195, 195, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  
 }
 .bg-image1{
     filter: blur(60px);
@@ -64,22 +71,20 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     flex-direction: column;
     gap: 10px;
 }
-button{
+.btn3{
+    background: linear-gradient(90deg, rgba(196,122,230,1) 0%, rgba(145,45,189,1) 100%);
+    background-size: 130%;
+    background-position: center;
     outline: none;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: 2px solid transparent;
     border-radius: 20px;
     font-family: "SUSE", sans-serif; 
     transition: 0.5s ease-in-out;
     color: white;
 }
-.btn1{
-    background: linear-gradient(90deg, rgba(196,122,230,1) 0%, rgba(145,45,189,1) 100%);
-    background-size: 130%;
-    background-position: center;
-}
-.btn1:hover{
+.btn3:hover{
     border-color: white;
 }
 .btn2 {
