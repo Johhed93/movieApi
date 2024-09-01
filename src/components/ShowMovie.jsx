@@ -21,7 +21,7 @@ const location= useParams();
       <img src={movie.thumb_url} className="thumb-nail"/>
       <div className="card">
         <h2>{movie.name}</h2>
-        <p>{movie.genre.join(" ")}</p>
+        <p>Genre: {movie.genre.join(" ")}</p>
         <p>Year: {movie.year}</p>
         <p>Rating: {movie.rating}⭐</p>
         <div className="button-container">
