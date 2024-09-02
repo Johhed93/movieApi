@@ -16,21 +16,22 @@ const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
     findSimilarMovies();
   }, [movie]);
   const findSimilarMovies = () => {
-    const pointsToSimilarites = movies.map((allmovies) => {
-      const genreScore = allmovies.genre.reduce(
+    const pointsToSimilarites = movies.map((allMovies) => {
+      const genreScore = allMovies.genre.reduce(
         (acc, genre) => acc + (movie.genre.includes(genre) ? 1 : 0),
         0
       );
-      const actorScore = allmovies.actors.reduce(
+      const actorScore = allMovies.actors.reduce(
         (acc, actor) => acc + (movie.actors.includes(actor) ? 2 : 0),
         0
       );
-      const directorScore = allmovies.directors.reduce(
+      const directorScore = allMovies.directors.reduce(
         (acc, director) => acc + (movie.directors.includes(director) ? 1 : 0),
         0
       );
-      const totalScore = genreScore + actorScore + directorScore;
-      return { ...allmovies, similarityScore: totalScore };
+      const yearScore = Math.abs(allMovies.year-movie.year) <= 10 ? 1:0;
+      const totalScore = genreScore + actorScore + directorScore + yearScore;
+      return { ...allMovies, similarityScore: totalScore };
     });
     const sortByMatch = pointsToSimilarites.sort((a, b) => {
       return b.similarityScore - a.similarityScore;
@@ -58,7 +59,7 @@ const ShowMore = ({ movie, favourites, setNewFavourites, movies }) => {
             <p>
               Authour: <i>{movie.directors}</i>
             </p>
-            <p>Actors: {movie.actors.join(" ")}</p>
+            <p>Actors: <i>{movie.actors.join(" ")}</i></p>
             <p>
               Description: <i>{movie.desc}</i>
             </p>
