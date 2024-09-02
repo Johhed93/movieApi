@@ -2,8 +2,11 @@
     margin-top: 150px;
     width: 84%;
     margin-inline: auto;
+}
+.movie-holder{
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     position: relative;
+    justify-content: center;
 }
