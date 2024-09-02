@@ -1,7 +1,12 @@
+
 .home-container{
     margin-top: 150px;
     width: 84%;
     margin-inline: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 .movie-holder{
     display: flex;
@@ -9,4 +14,5 @@
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
+    margin-top: 50px;
 }
