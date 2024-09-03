@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 .home-container{
     margin-top: 150px;
     width: 84%;
@@ -7,6 +7,7 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    font-family: "SUSE", sans-serif;  
 }
 .movie-holder{
     display: flex;
@@ -15,4 +16,12 @@
     position: relative;
     justify-content: center;
     margin-top: 50px;
+}
+.h1-tag{
+    font-size: 2.3rem;
+    color: white;
+}
+.category-container{
+    display: flex;
+    gap: 10px;
 }

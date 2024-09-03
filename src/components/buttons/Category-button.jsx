@@ -1,7 +1,8 @@
+import "./Category-button.css"
 const CategoryButton = ({onclick, text})=>{
     return (
         <>
-        <button onClick={onclick}>{text}</button>
+        <button className="category-btn" onClick={onclick}>{text}</button>
         </>
     )
 }

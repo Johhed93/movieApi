@@ -1,0 +1,32 @@
+.category-btn{
+    font-family: "SUSE", sans-serif;
+    background: none;
+    height: 70px;
+    width: 200px;
+    font-size: 1.3rem;
+    position: relative;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-position: center;
+    border-color: white;
+    transition: 0.3s ease-in-out;
+}
+.category-btn:hover{
+    transform: translateY(5px);
+}
+.category-btn::after{
+    height: 100px;
+    width: 100px;
+    content: "";
+    background: #d669f7;
+    border-radius: 100px;
+    left: 50%;
+    bottom: 50%;
+    filter: blur(40px);
+    position: absolute;
+    transition: 0.6s ease-in-out;
+}
+.category-btn:hover::after{
+    left: 0;
+}
