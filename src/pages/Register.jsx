@@ -22,6 +22,7 @@ const Register = () => {
       <div className="bg-image3"></div>
       <h1>Registrera dig</h1>
       <form onSubmit={handleSubmit}>
+        <div className="label-container">
         <label htmlFor="name">Førnavn:</label>
         <input
           type="text"
@@ -29,6 +30,34 @@ const Register = () => {
           id="name"
           ref={nameInput}
         />
+        </div>
+        <div className="label-container">
+        <label htmlFor="lastname">Efternavn:</label>
+        <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          ref={lastNameInput}
+        />
+        </div>
+        <div className="label-container">
+        <label htmlFor="username">Brukernavn:</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          ref={usernameInput}
+        />
+        </div>
+        <div className="label-container">
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          ref={usernameInput}
+        />
+        </div>
         <button className="btn1" type="submit">
           Skicka
         </button>
