@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+.content-container{
+    padding: 15px;
+    background: rgba(141, 141, 141, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(195, 195, 195, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 200px;
+  max-width: 1000px;
+  margin-inline: auto;
+  color: white;
+  font-family: "SUSE", sans-serif;  
+}
+.bg-image1{
+    filter: blur(60px);
+    -webkit-filter: blur(60px);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #b77fe9, #b47de4);
+    z-index: -1;
+}
+.bg-image2{
+    filter: blur(60px);
+    -webkit-filter: blur(60px);
+    position: absolute;
+    left: 70%;
+    bottom: 30%;
+    transform: translate(-50%, 50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #54a526, #158f11);
+    z-index: -2;
+}
+.bg-image3{
+    filter: blur(60px);
+    -webkit-filter: blur(60px);
+    position: absolute;
+    left: 60%;
+    transform: translate(-50%, 50%);
+    width: 100px;
+    height: 100px;
+    background: #52e6eb;
+    z-index: -3;
+}
