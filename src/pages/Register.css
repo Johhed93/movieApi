@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 .content-container{
-    padding: 15px;
+    padding: 30px 15px;
     background: rgba(141, 141, 141, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(195, 195, 195, 0.1);
@@ -13,8 +13,8 @@
   align-items: center;
   overflow: hidden;
   margin-top: 200px;
-  max-width: 1000px;
   margin-inline: auto;
+  width: fit-content;
   color: white;
   font-family: "SUSE", sans-serif;  
 }
@@ -51,4 +51,50 @@
     height: 100px;
     background: #52e6eb;
     z-index: -3;
+}
+.label-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    position: relative;
+}
+.form-inputs{
+    padding: 10px 15px;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(195, 195, 195, 0.1);
+    min-width: 300px;
+    color: white;
+}
+.user-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.see-password{
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.2rem;
+    right: 10px;    
+    top: 3px;
+    border-radius: 10px;
+    background: none;
+    padding: 0;
+}
+.see-password::after{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    content: "";
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #b47de4;
+    z-index: -1;
 }

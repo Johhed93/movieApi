@@ -6,6 +6,7 @@ const Register = () => {
   const usernameInput = useRef("");
   const passwordInput = useRef("");
   const [userRegister, setUserRegister] = useState([]);
+  const [showPassword, setShowPassword]= useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +22,7 @@ const Register = () => {
       <div className="bg-image2"></div>
       <div className="bg-image3"></div>
       <h1>Registrera dig</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="user-form">
         <div className="label-container">
         <label htmlFor="name">Førnavn:</label>
         <input
@@ -29,6 +30,7 @@ const Register = () => {
           name="name"
           id="name"
           ref={nameInput}
+           className="form-inputs"
         />
         </div>
         <div className="label-container">
@@ -38,6 +40,7 @@ const Register = () => {
           name="lastname"
           id="lastname"
           ref={lastNameInput}
+           className="form-inputs"
         />
         </div>
         <div className="label-container">
@@ -47,18 +50,24 @@ const Register = () => {
           name="username"
           id="username"
           ref={usernameInput}
+           className="form-inputs"
         />
         </div>
         <div className="label-container">
         <label htmlFor="password">Password:</label>
+        <div className="label-container">
         <input
-          type="password"
+          type={!showPassword ? "password" : "text"}
           name="password"
           id="password"
           ref={usernameInput}
+          className="form-inputs"
         />
+        <button className="see-password" onClick={()=>{setShowPassword((prevState)=>!prevState)}}>See</button>
         </div>
-        <button className="btn1" type="submit">
+
+        </div>
+        <button style={{marginTop:"10px"}} className="btn1" type="submit">
           Skicka
         </button>
       </form>
