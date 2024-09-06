@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import fetchData from "./api/FetchData";
 import Favourites from "./pages/Favourites";
 import { useState, useEffect } from "react";
-import MyPage from "./pages/MyPage";
+import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import ReadMore from "./pages/Readmore";
 const App = () => {
@@ -38,7 +38,7 @@ const App = () => {
               />
             }
           ></Route>
-          <Route path="/MyPage" element={<MyPage />}></Route>
+          <Route path="/Register" element={<Register />}></Route>
           <Route
             path="/Movies/:name"
             element={

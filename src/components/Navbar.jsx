@@ -11,8 +11,8 @@ const Navbar = () => {
       name: "Favoriter",
     },
     {
-      to: "/MyPage",
-      name: "Min sida",
+      to: "/Register",
+      name: "Registrera",
     },
   ];
   return (
